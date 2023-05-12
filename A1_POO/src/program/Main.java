@@ -49,14 +49,22 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.print("Digite número de andares que deseja subir: ");
-                    andar = sc.nextInt();
-                    elevador.subirAndar(andar);
+                    try {
+                        System.out.print("Digite número de andares que deseja subir: ");
+                        andar = sc.nextInt();
+                        elevador.subirAndar(andar);
+                    }catch (RuntimeException e){
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 4:
-                    System.out.print("Digite número de andares que deseja descer: ");
-                    andar = sc.nextInt();
-                    elevador.descerAndar(andar);
+                    try {
+                        System.out.print("Digite número de andares que deseja descer: ");
+                        andar = sc.nextInt();
+                        elevador.descerAndar(andar);
+                    }catch (RuntimeException e){
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 0:
                     opt = 0;
